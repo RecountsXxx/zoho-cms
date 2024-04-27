@@ -52,10 +52,8 @@ class AccessTokenService
                 Cache::put('zoho_refresh_token', $tokens['refresh_token']);
             }
 
-
             return $tokens['access_token'];
         }
-
 
         return $accessToken['access_token'];
     }
