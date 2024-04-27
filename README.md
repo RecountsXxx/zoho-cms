@@ -4,5 +4,5 @@
 
 ## Deployment
 - **Start script "setup.sh" command:** Run `/bin/bash/setup.sh` and wait for the initial setup.
-- **For other runs, enter the command:** `docker-compose up -d` and `npm run dev` to start the services.
+- **For other runs, enter the command:** `docker-compose up -d`
 - **Insert info in env (ZOHO_CLIENT_ID, ZOHO_CLINET_CODE(For first run), ZOHO_CLIENT_SECRET, ZOHO_ACCOUNT_URL)
