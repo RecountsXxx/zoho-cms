@@ -6,7 +6,7 @@
 - **For other runs, enter the command:** `docker-compose up -d`
 - **Insert info in env**
 - ZOHO_CLIENT_ID
-- ZOHO_CLIENT_CODE (For first run. I didn't find how to generate a token for self-client)
+- ZOHO_CLIENT_CODE (For first run. I didn't find how to generate a code for self-client)
 - ZOHO_CLIENT_SECRET
 - ZOHO_ACCOUNT_URL
 
