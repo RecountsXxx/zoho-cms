@@ -10,14 +10,18 @@ class ValidateZohoService
 {
     public function ValidateResponse($response)
     {
-        if ($response['data'][0]['code'] == 'INVALID_DATA') {
-            return 'Error: ' . $response['data'][0]['message'] . ', field: ' . $response['data'][0]['details']['expected_data_type'];
-        }
-        else if ($response['data'][0]['code'] == 'SUCCESS') {
-            return $response['data'][0]['message'];
+        if(isset($response['data'])) {
+            if ($response['data'][0]['code'] == 'INVALID_DATA') {
+                return 'Error: ' . $response['data'][0]['message'] . ', field: ' . $response['data'][0]['details']['expected_data_type'];
+            } else if ($response['data'][0]['code'] == 'SUCCESS') {
+                return $response['data'][0]['message'];
+            } else {
+                return $response['data'][0]['code'];
+            }
         }
         else{
-            return $response['data'][0]['code'];
+            Log::debug($response);
+            return  $response['message'];
         }
     }
 
