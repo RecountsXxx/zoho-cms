@@ -5,7 +5,6 @@ import App from './App.vue';
 import {createRouter, createWebHistory} from "vue-router";
 
 
-import Notifications from '@kyvg/vue3-notification'
 import HomePage from "@/pages/home/HomePage.vue";
 
 const routes = [
@@ -18,6 +17,5 @@ const router = createRouter({
 
 const app = createApp(App)
 app.use(router)
-app.use(Notifications)
 app.mount('#app')
 

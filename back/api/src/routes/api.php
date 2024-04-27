@@ -1,12 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\CRM\Account\AccountController;
+use App\Http\Controllers\CRM\Deals\DealController;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::get('hello',function (){
-    return 'hello';
-});
+Route::post('/add-account',AccountController::class);
+Route::post('/add-deal',DealController::class);
