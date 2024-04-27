@@ -48,7 +48,12 @@ class AccessTokenService
                     'expires_in' => time() + $tokens['expires_in']
                 ];
                 Cache::put('zoho_access_token', $accessToken, $tokens['expires_in']);
-            } elseif (isset($tokens['refresh_token'])) {
+
+                if (isset($tokens['refresh_token'])) {
+                    Cache::put('zoho_refresh_token', $tokens['refresh_token']);
+                }
+            }
+            else if (isset($tokens['refresh_token'])) {
                 Cache::put('zoho_refresh_token', $tokens['refresh_token']);
             }
 
