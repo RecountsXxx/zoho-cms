@@ -12,7 +12,7 @@ class AccessTokenService
         $clientId = env("ZOHO_CLIENT_ID");
         $clientSecret = env("ZOHO_CLIENT_SECRET");
         $accountUrl = env("ZOHO_ACCOUNT_URL");
-        $code = env("ZOHO_CLIENT_CODE");
+        $code = env("ZOHO_CLIENT_CODE"); // для первого запуска ZOHOCRM.modules.ALL для self client я не нашёл способ как его получить
 
         $accessToken = Cache::get('zoho_access_token');
         $refreshToken = Cache::get('zoho_refresh_token');
